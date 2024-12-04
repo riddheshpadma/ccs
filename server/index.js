@@ -9,7 +9,7 @@ const app = express()
 
 const PORT = 5000;
 
-const mongoDBUri = "mongodb://localhost:27017/riddheshpadmadev"
+const mongoDBUri = 'mongodb+srv://riddheshpadmadev:Ri@hesh0712@cluster0.mongodb.net/database'
 connectDB(mongoDBUri);
 
 app.use(cors());
@@ -20,13 +20,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/', async (req, res) => {
   const body = req.body;
-   try {
-    const newUser  = new User({
-        name : body.name,
-        email : body.email,
-        number: body.number,
-        company: body.company,
-        message: body.message
+  try {
+    const newUser = new User({
+      name: body.name,
+      email: body.email,
+      number: body.number,
+      company: body.company,
+      message: body.message
     })
     await newUser.save();
 
@@ -38,5 +38,5 @@ app.post('/', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
