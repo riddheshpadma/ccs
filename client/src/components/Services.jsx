@@ -68,7 +68,7 @@ const Services = () => {
         <div className='container max-w-2xl  px-4 py-8'>
             <Slider {...settings}>
                 {services_data.map((service, index) => (
-                    <div key={index} className='flex p-4 max-w-xl bg-gray-900 rounded-lg text-white'>
+                    <div key={index} className='flex p-4 max-w-xl bg-[#2A2A2A] rounded-lg text-white'>
                         <div className='flex flex-col lg:flex-row min-h-[650px] lg:min-h-[300px] max-h-[600px]'>
                             <div className='flex-1 p-4'>
                                 <h1 className='text-2xl  font-bold mb-2'>{service.service_head}</h1>
@@ -76,7 +76,11 @@ const Services = () => {
                             </div>
                             <div className='flex-1  max-w-96 p-4 space-y-10'>
                                 <img src={service.img_url} alt={service.service_head} className='mb-4 rounded-lg' />
-                                <BlogBtn btn_context={service.button_context} />
+                                <button class="cursor-pointer font-semibold overflow-hidden relative z-100 active:scale-105 transform ease-in-out duration-100 rounded-lg border border-white group px-8 py-2">
+                                    <span class="relative z-10 text-white group-hover:text-black  duration-500">Schedule Meet</span>
+                                    <span class="absolute w-full h-full bg-white -left-36 top-0 -rotate-45 group-hover:rotate-0 group-hover:left-0 duration-500"></span>
+                                    <span class="absolute w-full h-full bg-white -right-36 top-0 -rotate-45 group-hover:rotate-0 group-hover:right-0 duration-500"></span>
+                                </button>
                             </div>
                         </div>
 

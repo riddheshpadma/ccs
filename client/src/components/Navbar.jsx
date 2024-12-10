@@ -10,7 +10,7 @@ export const Navbar = () => {
                 <div className='flex justify-between items-center p-4'>
                     <div className='flex justify-between items-center p-2 space-x-10'>
                         <div className='flex justify-center items-center p-2 rounded-full backdrop-blur-sm'>
-                            <img src={Brand} alt="" className='w-16 md:w-32' />
+                            <img src={Brand} alt="" className='w-24 md:w-32' />
                         </div>
                         <div className='relative backdrop-blur-lg  rounded-md  '>
                             <div className=''>

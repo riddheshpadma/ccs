@@ -52,8 +52,8 @@ export const Home = () => {
         <div className='relative min-h-screen align-middle  overflow-hidden'>
           <div className='absolute z-10 md:left-40 lg:left-[64] md:right-40 lg:right-[64] top-28 p-10'>
             <div className='py-5 px-5 rounded-3xl backdrop-blur-md mt-28'>
-              <h1 className='text-4xl font-bold sm:font-normal sm:text-6xl md:text-7xl lg:text-8xl '>Welcome to PSS</h1>
-              <p className='text-2xl mt-10'>Empowering businesses with innovative tech solutions. <br /> Creativity meets technology at PSS.</p>
+              <h1 className='text-4xl font-bold sm:font-normal sm:text-6xl md:text-7xl lg:text-8xl '>Welcome to CCS</h1>
+              <p className='text-2xl mt-10'>Empowering businesses with innovative tech solutions. <br /> Creativity meets technology at CCS.</p>
             </div>
           </div>
           <div className='absolute -z-10 right-[-200px] md:right-[-100px] top-[-150px] md:top-[-50px]'>
@@ -67,14 +67,14 @@ export const Home = () => {
       {/* Hero section ends */}
 
       {/* Services Section Starts */}
-      <section id='services' className='text-black px-10 py-16 lg:py-40'>
+      <section id='services' className='text-black px-10 py-24 lg:py-40'>
         <div className='secContainer'>
           <div className='subHeadSec'>
             <span>Services</span>
           </div>
           <div className='flex-1'>
             <div className='lg:mb-14'>
-              <h1 className='heading'>Services Provided by PSS</h1>
+              <h1 className='heading'>Services Provided by CCS</h1>
             </div>
             <div className=''>
               <Services />
@@ -86,7 +86,7 @@ export const Home = () => {
       {/* Services section ends */}
 
       {/* About Us Section Starts */}
-      <section id='aboutus' className='text-black px-10 py-16 lg:py-40'>
+      <section id='aboutus' className='text-black px-10 py-24 lg:py-40'>
         <div className='secContainer'>
           <div className='subHeadSec'>
             <span>About Us</span>
@@ -114,7 +114,7 @@ export const Home = () => {
                   <li><span className='font-bold'>Innovation & Quality:</span> We thrive on creativity and deliver products with uncompromised quality.</li>
                 </ul>
                 <p className='mt-10 font-extrabold text-xl'>Let’s shape the future together.</p>
-                <p className='font-bold mt-4'>Padma Sphere Services – Transforming ideas into impactful solutions.</p>
+                <p className='font-bold mt-4'>Chakra Code Services – Transforming ideas into impactful solutions.</p>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@ export const Home = () => {
       {/* About Us section ends */}
 
       {/* Technologies Section starts */}
-      <section id='technologies' className='text-black px-10 py-16 lg:py-40'>
+      <section id='technologies' className='text-black px-10 py-24 lg:py-40'>
         <div className='secContainer'>
           <div className='subHeadSec'>
             <p>Technologies</p>
@@ -233,7 +233,7 @@ export const Home = () => {
       {/* Technologies section ends */}
 
       {/* Blogs section starts */}
-      <section id='blogs' className='text-black px-10 py-16 lg:py-40 '>
+      <section id='blogs' className='text-black px-10 py-24 lg:py-40 '>
         <div className='secContainer'>
           <div className='subHeadSec'>
             <span>Blogs</span>
@@ -254,7 +254,7 @@ export const Home = () => {
 
 
       {/* Contact Us section starts */}
-      <section id='contact' className='text-black px-10 py-16 lg:py-40'>
+      <section id='contact' className='text-black px-10 py-24 lg:py-40'>
         <div className='secContainer'>
           <div className='subHeadSec'>
             <span>Connect Us</span>
@@ -335,12 +335,12 @@ export const Home = () => {
                     </li>
                   </ul>
                 </div>
-                <div>
+                <div className='mt-28'>
                   <ul className="flex flex-col justify-center items-center space-y-2">
                     <li>
                       {/* <span className="font-semibold mr-2">Email:</span> */}
                       <a href="mailto:hello@example.com" className="text-primary hover:underline">
-                        padmasphereservices@gmail.com
+                        chakracodeservices@gmail.com
                       </a>
                     </li>
                     <li>

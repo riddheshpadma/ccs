@@ -61,7 +61,7 @@ code {
 
   /* social links */
   .btnSocial {
-    @apply transform transition-transform duration-500 hover:scale-125 hover:text-amber-400
+    @apply transform transition-transform  hover:scale-125 duration-500 ease-in-out hover:text-[#B80909]
   }
 
   .btnSpan {

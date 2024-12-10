@@ -9,7 +9,7 @@ const app = express()
 
 const PORT = 5000;
 
-const mongoDBUri = 'mongodb+srv://riddheshpadmadev:Ri@hesh0712@cluster0.mongodb.net/database'
+const mongoDBUri = 'mongodb://localhost:27017/ccs'
 connectDB(mongoDBUri);
 
 app.use(cors());
