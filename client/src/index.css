@@ -56,12 +56,12 @@ code {
 
   /* contacts section */
   .input-field {
-    @apply block w-full border-b border-neutral-800 bg-transparent py-4 pl-6 pr-20 text-base/6 text-secondaryColor ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-secondaryColor focus:outline-none focus:ring-neutral-950/5
+    @apply block w-full border-b border-neutral-800 bg-transparent py-4 pl-6 pr-20 text-base/6 text-primaryColor ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-secondaryColor focus:outline-none focus:ring-neutral-950/5
   }
 
   /* social links */
   .btnSocial {
-    @apply transform transition-transform  hover:scale-125 duration-500 ease-in-out hover:text-[#B80909]
+    @apply transform transition-transform hover:scale-125 duration-500 ease-in-out hover:text-[#B80909]
   }
 
   .btnSpan {
@@ -76,8 +76,13 @@ code {
   .skillSpan {
     @apply absolute top-16 left-8 items-center transform -translate-x-1/2 z-20 px-4 py-2 text-sm font-bold text-gray-950 bg-amber-50 rounded-lg shadow-xl transition-transform duration-500 ease-in-out scale-0 group-hover:scale-100
   }
+
+  /* Navbar list items */
+  .navItems {
+    @apply px-6 text-lg hover:text-tirtaryColor transform ease-in-out duration-500
+  }
 }
 
-.slick-slide > div {
-  margin: 0, 10px;
+.slick-slide>div {
+  margin: 0px, 10px;
 }

@@ -1,46 +1,41 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 // Components import
-import { Navbar } from '../components/Navbar';
-import { BottomNavbar } from '../components/BottomNavbar';
-import ContactForm from '../components/ContactForm';
-import Footer from '../components/Footer';
-import BlogBtn from '../components/BlogBtn';
-import '../style/home.css'
+import { Navbar } from '../../components/Navbar';
+import { BottomNavbar } from '../../components/BottomNavbar';
+
+import '../../style/home.css'
 
 // Images Imports
-import stone1 from '../assets/img/stone1.png'
-import stone2 from '../assets/img/stone2.png'
-import hero1 from '../assets/img/hero1.webp'
-import flower from '../assets/img/flower.webp'
+import hero1 from '../../assets/img/hero1.webp'
+import ServiceSec from '../../assets/img/services/servicesechome.jpg'
+import HeroBg from '../../assets/img/backgroundhome.jpg'
 
 
 
 // Icons Import
-import { LuLinkedin, LuGithub } from "react-icons/lu";
-import { RiTwitterXFill } from "react-icons/ri";
-import { BsInstagram } from "react-icons/bs";
-import { AiOutlineDiscord } from "react-icons/ai";
-import html from '../assets/img/skills/html.png'
-import css from '../assets/img/skills/css.png'
-import git from '../assets/img/skills/git.png'
-import express from '../assets/img/skills/express.png'
-import java from '../assets/img/skills/java.png'
-import js from '../assets/img/skills/js.png'
-import mongodb from '../assets/img/skills/mongodb.png'
-import mysql from '../assets/img/skills/mysql.png'
-import python from '../assets/img/skills/python.png'
-import nodejs from '../assets/img/skills/nodejs.png'
-import react from '../assets/img/skills/react.png'
-import bootstrap from '../assets/img/skills/bootstrap.png'
-import github from '../assets/img/skills/github.png'
-import tailwind from '../assets/img/skills/tailwind.png'
-import Services from '../components/Services';
-import BlogScroll from '../components/BlogScroll';
+
+import html from '../../assets/img/skills/html.png'
+import css from '../../assets/img/skills/css.png'
+import git from '../../assets/img/skills/git.png'
+import express from '../../assets/img/skills/express.png'
+import java from '../../assets/img/skills/java.png'
+import js from '../../assets/img/skills/js.png'
+import mongodb from '../../assets/img/skills/mongodb.png'
+import mysql from '../../assets/img/skills/mysql.png'
+import python from '../../assets/img/skills/python.png'
+import nodejs from '../../assets/img/skills/nodejs.png'
+import react from '../../assets/img/skills/react.png'
+import bootstrap from '../../assets/img/skills/bootstrap.png'
+import github from '../../assets/img/skills/github.png'
+import tailwind from '../../assets/img/skills/tailwind.png'
+
+import ContactUs from '../../components/ContactUs';
 
 
 
-export const Home = () => {
+export const index = () => {
   return (
     <div className='flex flex-col'>
       {/* Menu Bars */}
@@ -48,20 +43,33 @@ export const Home = () => {
       <BottomNavbar />
 
       {/* Hero Section Starts */}
-      <section id='home' className='text-black'>
-        <div className='relative min-h-screen align-middle  overflow-hidden'>
-          <div className='absolute z-10 md:left-40 lg:left-[64] md:right-40 lg:right-[64] top-28 p-10'>
-            <div className='py-5 px-5 rounded-3xl backdrop-blur-md mt-28'>
-              <h1 className='text-4xl font-bold sm:font-normal sm:text-6xl md:text-7xl lg:text-8xl '>Welcome to CCS</h1>
-              <p className='text-2xl mt-10'>Empowering businesses with innovative tech solutions. <br /> Creativity meets technology at CCS.</p>
+      <section id='home' className='relative  text-black'
+        style={{
+          backgroundImage: `url(${HeroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '100vh',
+          width: '100%',
+        }}
+      >
+        <div className='absolute inset-0 bg-black bg-opacity-55 z-0 shadow-2xl shadow-gray-500'></div>
+        <div className='relative z-10 min-h-screen align-middle  overflow-hidden text-white'>
+          <div className='absolute z-10 md:left-40 lg:left-[64] md:right-40 lg:right-[64] lg:top-28 p-10'>
+            <div className='py-5 px-5 rounded-3xl mt-28'>
+              <h1 className='text-4xl font-bold sm:font-normal sm:text-6xl md:text-7xl lg:text-8xl '>Building Digital Brilliance.</h1>
+              <p className='text-md md:text-2xl mt-4 md:mt-6 mb-6'>Empowering businesses with innovative tech solutions. <br /> Creativity meets technology at CCS.</p>
+              <Link to='/getstarted'>
+                <button className='py-2 md:py-4 px-4 md:px-10 bg-primaryColor hover:bg-tirtaryColor text-white ease-in-out duration-1000 text-base md:text-xl'>Lets Grow Together</button>
+              </Link>
+
             </div>
           </div>
-          <div className='absolute -z-10 right-[-200px] md:right-[-100px] top-[-150px] md:top-[-50px]'>
+          {/* <div className='absolute -z-10 right-[-200px] md:right-[-100px] top-[-150px] md:top-[-50px]'>
             <img src={stone1} alt="" className='' />
           </div>
           <div className='absolute -z-10 left-[-300px] md:left-[-200px] bottom-[-100px] md:bottom-[-50px]'>
             <img src={stone2} alt="" />
-          </div>
+          </div> */}
         </div>
       </section >
       {/* Hero section ends */}
@@ -74,10 +82,20 @@ export const Home = () => {
           </div>
           <div className='flex-1'>
             <div className='lg:mb-14'>
-              <h1 className='heading'>Services Provided by CCS</h1>
+              <h1 className='heading'>Innovate. Design. Deliver.</h1>
             </div>
-            <div className=''>
-              <Services />
+            <div className='flex lg:flex-row flex-col items-center justify-between'>
+              <div className='flex-1'>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, possimus autem perspiciatis nam qui consequuntur sed corrupti, eveniet cupiditate numquam maiores facere laudantium dolorum explicabo dolor officia. Temporibus necessitatibus officia ab iusto aperiam, distinctio rem laudantium quos nesciunt, assumenda ipsum.</p>
+              </div>
+              <div className='flex flex-1 max-w-md  items-center justify-start p-10 text-white'>
+                <Link to="/services">
+                  <button className='md:ml-10 py-3 px-10 bg-[#2a2a2a] hover:bg-black ease-in-out duration-1000 text-base md:text-xl'>Know More</button>
+                </Link>
+              </div>
+            </div>
+            <div className='max-w-4xl mt-16 rounded-3xl overflow-hidden shadow-2xl shadow-gray-500 '>
+              <img src={ServiceSec} alt="" />
             </div>
           </div>
         </div>
@@ -232,137 +250,10 @@ export const Home = () => {
       </section>
       {/* Technologies section ends */}
 
-      {/* Blogs section starts */}
-      <section id='blogs' className='text-black px-10 py-24 lg:py-40 '>
-        <div className='secContainer'>
-          <div className='subHeadSec'>
-            <span>Blogs</span>
-          </div>
-          <div className='flex-1'>
-            <div className='max-w-3xl'>
-              <h1 className='heading'>Tech & Some Magic</h1>
-            </div>
-            <div className='sm:w-3/4 py-14 md:py-20 space-y-28'>
-              <BlogScroll />
-            </div>
-
-          </div>
-        </div>
-      </section>
-      {/* Services section ends */}
-
-
-
       {/* Contact Us section starts */}
-      <section id='contact' className='text-black px-10 py-24 lg:py-40'>
-        <div className='secContainer'>
-          <div className='subHeadSec'>
-            <span>Connect Us</span>
-          </div>
-          <div className='flex-1'>
-            <div className='max-w-3xl'>
-              <h1 className='heading'>Just Say Hello!</h1>
-            </div>
-            <div className='md:w-3/4 py-10'>
-              <img src={hero1} alt="" className='rounded-2xl' />
-            </div>
-            <div className="max-w-3xl">
-              <div>
-                <div>
-                  <h3 className="text-4xl font-semibold mb-2">Get in Touch</h3>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-20">
-                <div>
 
-                  <p className="text-lg mb-4">Want to know more about us, have a project in mind? Drop us a line and we will get back as soon as possible.</p>
-                </div>
-
-              </div>
-              <div>
-                <ContactForm />
-                <div className='flex justify-center items-center p-10 mt-5'>
-                  <ul className='flex justify-around w-full'>
-                    <li>
-                      <div className="group relative inline-block">
-                        <button class="focus:outline-none">
-                          <LuLinkedin size={36} className="btnSocial" />
-                        </button>
-                        <span
-                          className='btnSpan'
-                        >LinkedIn</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="group relative inline-block">
-                        <button class="focus:outline-none">
-                          <RiTwitterXFill size={36} className="btnSocial" />
-                        </button>
-                        <span
-                          className='btnSpan'
-                        >X</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="group relative inline-block">
-                        <button class="focus:outline-none">
-                          <LuGithub size={36} className="btnSocial" />
-                        </button>
-                        <span
-                          className='btnSpan'
-                        >Github</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="group relative inline-block">
-                        <button class="focus:outline-none">
-                          <BsInstagram size={36} className="btnSocial" />
-                        </button>
-                        <span
-                          className="btnSpan"
-                        >Instagram</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="group relative inline-block">
-                        <button class="focus:outline-none">
-                          <AiOutlineDiscord size={36} className="btnSocial" />
-                        </button>
-                        <span
-                          className="btnSpan"
-                        >Discord</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className='mt-28'>
-                  <ul className="flex flex-col justify-center items-center space-y-2">
-                    <li>
-                      {/* <span className="font-semibold mr-2">Email:</span> */}
-                      <a href="mailto:hello@example.com" className="text-primary hover:underline">
-                        chakracodeservices@gmail.com
-                      </a>
-                    </li>
-                    <li>
-                      {/* <span className="font-semibold mr-2">Phone:</span> */}
-                      <a href="tel:+123456789" className="text-primary hover:underline">
-                        +91 922640 6267
-                      </a>
-                    </li>
-                    <li className='flex justify-center'>
-                      {/* <span className="font-semibold mr-2">Location:</span> */}
-                      <span>Solapur-413006, Bharat</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </section>
-      <Footer />
+      <ContactUs />
     </div >
   )
 }
-export default Home;
+export default index;
